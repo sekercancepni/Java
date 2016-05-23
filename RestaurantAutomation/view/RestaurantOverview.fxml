@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.model.GeneralController">
+   <children>
+      <AnchorPane layoutX="-21.0" layoutY="-127.0" prefHeight="484.0" prefWidth="523.0">
+         <children>
+            <TabPane fx:id="someid" layoutX="21.0" layoutY="127.0" prefHeight="357.0" prefWidth="502.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="0.0">
+              <tabs>
+                <Tab text="Products">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="119.0" text="Product Name : ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="42.0" text="Amount :">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="productName" layoutX="148.0" layoutY="12.0" />
+                              <TextField fx:id="productAmount" layoutX="148.0" layoutY="40.0" />
+                              <Button layoutX="315.0" layoutY="13.0" mnemonicParsing="false" onAction="#productSave" prefHeight="25.0" prefWidth="84.0" text="Save" />
+                              <Separator layoutX="14.0" layoutY="84.0" prefHeight="3.0" prefWidth="472.0" />
+                              <TableView fx:id="productList" layoutX="14.0" layoutY="93.0" prefHeight="243.0" prefWidth="470.0">
+                                <columns>
+                                  <TableColumn fx:id="idCol" prefWidth="59.0" text="Id" />
+                                  <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="213.0" text="Product Name" />
+                                    <TableColumn fx:id="amountCol" prefWidth="232.0" text="Amount" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="405.0" layoutY="13.0" mnemonicParsing="false" text="Get Products" />
+                              <Button fx:id="remove" layoutX="363.0" layoutY="50.0" mnemonicParsing="false" onAction="#productRemove" prefHeight="25.0" prefWidth="85.0" text="Remove" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Tables">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="101.0" text="Masa İsmi :">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tableName" layoutX="154.0" layoutY="12.0" />
+                              <TextField fx:id="descr" layoutX="154.0" layoutY="50.0" />
+                              <Label layoutX="22.0" layoutY="52.0" text="Description : ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="save2" layoutX="352.0" layoutY="12.0" mnemonicParsing="false" onAction="#tableSave" prefHeight="25.0" prefWidth="93.0" text="Save" />
+                              <Separator layoutX="15.0" layoutY="115.0" prefHeight="2.0" prefWidth="473.0" />
+                              <TableView layoutX="14.0" layoutY="125.0" prefHeight="204.0" prefWidth="479.0">
+                                <columns>
+                                  <TableColumn prefWidth="135.0" text="Id" />
+                                  <TableColumn prefWidth="168.0" text="Table Name" />
+                                    <TableColumn prefWidth="135.0" text="Description" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="remove2" layoutX="351.0" layoutY="50.0" mnemonicParsing="false" onAction="#tableRemove" prefHeight="25.0" prefWidth="95.0" text="Remove" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Help">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="110.0" layoutY="80.0" prefHeight="27.0" prefWidth="282.0" text="Customer Service Phone Number">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="167.0" layoutY="124.0" text="1-800-742-5877">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Safety Exit">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="116.0" layoutY="94.0" prefHeight="17.0" prefWidth="186.0" />
+                              <Button fx:id="exit2" alignment="CENTER" contentDisplay="CENTER" layoutX="171.0" layoutY="152.0" mnemonicParsing="false" onAction="#ExitClickButton" prefHeight="25.0" prefWidth="160.0" text="Safety Exit" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
